@@ -1,5 +1,8 @@
 const parseEnv = () => {
-    // Write your code here 
+  for (let foo in process.env) {
+    if (/^RSS_/.test(foo)) {
+      console.log(`${foo}=${process.env[foo]};`);
+    }
+  }
 };
-
 parseEnv();
